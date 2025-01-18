@@ -1,0 +1,62 @@
+[gd_scene load_steps=3 format=3 uid="uid://2vkmvadfnwkv"]
+
+[ext_resource type="Script" path="res://Scenes/multiplayer_lobby.gd" id="1_p3pvp"]
+[ext_resource type="VideoStream" path="res://0294-1196.ogv" id="2_jy288"]
+
+[node name="MultiplayerLobby" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_p3pvp")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.598895, 0.598443)
+stream = ExtResource("2_jy288")
+autoplay = true
+loop = true
+
+[node name="HostButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 47.0
+offset_top = 97.0
+offset_right = 282.0
+offset_bottom = 173.0
+text = "HOST GAME"
+
+[node name="JoinButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 187.0
+offset_right = 282.0
+offset_bottom = 255.0
+text = "JOIN GAME"
+
+[node name="StartServerButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 526.0
+offset_right = 1077.0
+offset_bottom = 597.0
+text = "Start Server"
+
+[node name="LineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 450.0
+offset_right = 1019.0
+offset_bottom = 493.0
+placeholder_text = "Enter Your Gamer Tag"
+
+[node name="IPaddressLineEdit" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 387.0
+offset_right = 1019.0
+offset_bottom = 430.0
+placeholder_text = "Enter Your IP address (for LAN Play)"

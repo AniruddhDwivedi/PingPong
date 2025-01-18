@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://xsm2nf3lgo0n"]
+
+[ext_resource type="Texture2D" uid="uid://rf8gk3k0fao7" path="res://Scenes/Paddle/ww.png" id="1_lhoov"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqlms"]
+size = Vector2(32, 255)
+
+[node name="Wall" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-0.5, 0.500005)
+scale = Vector2(0.0970588, 0.14774)
+texture = ExtResource("1_lhoov")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_wqlms")
